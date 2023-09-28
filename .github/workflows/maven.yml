@@ -40,7 +40,7 @@ jobs:
         chmod +x chromedriver
         sudo mv chromedriver /usr/local/bin/
     - name: Build with Maven
-      run: mvn clean verify -Dtesting.dtd.http=true
+      run: mvn clean verify -Dtesting.dtd.http=true -e -X
 
     - name: Upload Cucumber Report
       uses: actions/upload-artifact@v2
